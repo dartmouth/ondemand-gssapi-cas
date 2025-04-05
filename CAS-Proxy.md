@@ -57,6 +57,7 @@ sudo podman run \
 -e EMAIL_ADDRESS=research.computing@dartmouth.edu \
 -e WEB_ADDRESS=https://ood.dartmouth.edu \
 -e PROXY_ADDRESS=https://10.123.123.123:443 \
+-e WEBSOCKET_ADDRESS=wss://10.123.123.123:443 \
 -e CAS_ADDRESS=https://login.dartmouth.edu \
 -e SERVER_NAME=ood.dartmouth.edu:443 \
 cas-proxy

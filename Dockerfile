@@ -69,6 +69,7 @@ sed -i \
 -e "s@ServerName www.example.com:443@ServerName \${SERVER_NAME}@" \
 -e "s@https://www.example.com:443@\${WEB_ADDRESS}@" \
 -e "s@https://proxy.example.com:443@\${PROXY_ADDRESS}@" \
+-e "s@wss://proxy.example.com:443@\${PROXY_ADDRESS}@" \
 /usr/local/apache2/conf/extra/httpd-ssl.conf
 sed -i \
 -e "s@https://example.com:443@\${WEB_ADDRESS}@" \
