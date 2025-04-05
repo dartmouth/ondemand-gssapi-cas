@@ -24,7 +24,7 @@ SSLProxyCheckPeerName off\n\
 SSLProxyCheckPeerExpire off\n\
 ProxyErrorOverride off\n\
 ProxyPreserveHost on\n\
-ProxyPassMatch ^/rnode/(.*)$ wss:\/\/proxy.example.com:443/rnode/\$1\n\
+ProxyPassMatch ^/rnode/(.*)\$ wss:\/\/proxy.example.com:443/rnode/\$1\n\
 ProxyPass \/ https:\/\/proxy.example.com:443\/\n\
 ProxyPassReverse \/ https:\/\/proxy.example.com:443\/\n\
 ProxyTimeout 300' \
@@ -69,7 +69,7 @@ sed -i \
 -e "s@ServerName www.example.com:443@ServerName \${SERVER_NAME}@" \
 -e "s@https://www.example.com:443@\${WEB_ADDRESS}@" \
 -e "s@https://proxy.example.com:443@\${PROXY_ADDRESS}@" \
--e "s@wss://proxy.example.com:443@\${PROXY_ADDRESS}@" \
+-e "s@wss://proxy.example.com:443@\${WEBSOCKET_ADDRESS}@" \
 /usr/local/apache2/conf/extra/httpd-ssl.conf
 sed -i \
 -e "s@https://example.com:443@\${WEB_ADDRESS}@" \
