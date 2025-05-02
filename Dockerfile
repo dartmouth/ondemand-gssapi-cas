@@ -25,6 +25,7 @@ SSLProxyCheckPeerExpire off\n\
 ProxyErrorOverride off\n\
 ProxyPreserveHost on\n\
 ProxyPassMatch ^/rnode/(.*)\$ wss:\/\/proxy.example.com:443/rnode/\$1\n\
+ProxyPassMatch ^/pun/sys/shell/ssh/(.*)\$ wss:\/\/proxy.example.com:443/pun/sys/shell/ssh/\$1\n\
 ProxyPass \/ https:\/\/proxy.example.com:443\/\n\
 ProxyPassReverse \/ https:\/\/proxy.example.com:443\/\n\
 ProxyTimeout 300' \
