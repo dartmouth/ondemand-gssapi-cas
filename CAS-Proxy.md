@@ -45,7 +45,7 @@ ssh admin@ood-webserver
 
 git clone https://github.com/dartmouth/ondemand-gssapi-cas.git
 
-cd cas-proxy
+cd ondemand-gssapi-cas
 
 sudo podman build -t cas-proxy .
 
